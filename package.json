@@ -1,0 +1,23 @@
+{
+  "name": "ironman-1489",
+  "version": "1.0.0",
+  "description": "一個 JS 學習者的日常\r 這是參考鐵人賽的其中一個作者，因為考慮之後有很多的git會參考所以在專案上的名稱設計是以文章的編號為準\r 使用Quokka.js 來測試 `Ctrl/Cmd + Shift + P`\r 相關的文件可看[一個JS學習者的日常](https://ttom921.github.io/%E4%B8%80%E5%80%8BJS%E5%AD%B8%E7%BF%92%E8%80%85%E7%9A%84%E6%97%A5%E5%B8%B8/)",
+  "main": "day01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttom921/IronMan-1489.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttom921/IronMan-1489/issues"
+  },
+  "homepage": "https://github.com/ttom921/IronMan-1489#readme",
+  "dependencies": {
+    "rxjs": "^6.5.2",
+    "rxjs-compat": "^6.5.2"
+  }
+}
