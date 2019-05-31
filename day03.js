@@ -40,16 +40,26 @@
 // console.log(ages);
 
 //-- 物件的複製
+// var firstName = 'Hu';
+
+// var ages = {
+//     'Hu Jim': 28,
+//     'Hu Koa': 60
+// }
+// //Shallow Clone
+// var agesNextYear = ages;
+// agesNextYear[firstName + ' Jim'] = 29;
+// console.log('Shallow Clone ages:' + ages[firstName + ' Jim']);
+// console.log('Shallow Clone agesNextYear' + agesNextYear[firstName + ' Jim']);
+
+//Deep Clone
 var firstName = 'Hu';
 
 var ages = {
     'Hu Jim': 28,
     'Hu Koa': 60
 }
-//Shallow Clone
-var agesNextYear = ages;
+var agesNextYear= Object.assign({},ages);
 agesNextYear[firstName + ' Jim'] = 29;
-console.log('Shallow Clone ages:' + ages[firstName + ' Jim']);
-console.log('Shallow Clone agesNextYear' + agesNextYear[firstName + ' Jim']);
-
-//Deep Clone
+console.log('Deep Clone ages:' + ages[firstName + ' Jim']);
+console.log('Deep Clone agesNextYear' + agesNextYear[firstName + ' Jim']);
