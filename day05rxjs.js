@@ -1,4 +1,3 @@
-import { onErrorResumeNext } from "rxjs-compat/operator/onErrorResumeNext";
 
 // import { Observable } from "rxjs";
 // var observable$ = Observable.create((observer) => {
