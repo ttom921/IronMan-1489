@@ -1,7 +1,3 @@
-
-
-
-
 // import { of } from "rxjs";
 
 // var source$ = of('Jery', 'Anna');
@@ -139,17 +135,99 @@
 //         console.log(error)
 //     }
 // });
-import { throwError } from "rxjs";
-var source$ = throwError('Oop!');
-source$.subscribe({
+
+// import { throwError } from "rxjs";
+// var source$ = throwError('Oop!');
+// source$.subscribe({
+//     next: function (value) {
+//         console.log(value)
+//     },
+//     complete: function () {
+//         console.log('complete!');
+//     },
+//     error: function (error) {
+//         console.log('Throw Error: ' + error)
+//     }
+// });
+// // Throw Error: Oop!
+
+// import { Observable } from "rxjs";
+// var source$ = Observable.create(observer => {
+//     var i = 0;
+//     setInterval(() => {
+//         observer.next(i++);
+//     }, 1000);
+// });
+
+// source$.subscribe({
+//     next: function (value) {
+//         console.log(value)
+//     },
+//     complete: function () {
+//         console.log('complete!');
+//     },
+//     error: function (error) {
+//         console.log('Throw Error: ' + error);
+//     }
+// });
+
+// import { interval } from "rxjs";
+// var source$ = interval(1000);
+// source$.subscribe({
+//     next: function (value) {
+//         console.log(value);
+//     },
+//     complete: function () {
+//         console.log('complete');
+//     },
+//     error: function (error) {
+//         console.log('Throw Error: ' + error);
+//     }
+// });
+
+// import { timer } from "rxjs";
+// var source$ = timer(1000, 5000);
+// source$.subscribe({
+//     next: function (value) {
+//         console.log(value);
+//     },
+//     complete: function () {
+//         console.log('complete');
+//     },
+//     error: function (error) {
+//         console.log('Throw Error: ' + error);
+//     }
+// });
+
+// import { timer } from "rxjs";
+// var source$ = timer(1000);
+// source$.subscribe({
+//     next: function (value) {
+//         console.log(value);
+//     },
+//     complete: function () {
+//         console.log('complete');
+//     },
+//     error: function (error) {
+//         console.log('Throw Error: ' + error);
+//     }
+// });
+
+import { timer } from "rxjs";
+var source$ = timer(1000, 1000);
+//取得subscription
+var subscription = source$.subscribe({
     next: function (value) {
-        console.log(value)
+        console.log(value);
     },
     complete: function () {
-        console.log('complete!');
+        console.log('complete');
     },
     error: function (error) {
-        console.log('Throw Error: ' + error)
+        console.log('Throw Error: ' + error);
     }
 });
-// Throw Error: Oop!
+
+setTimeout(() => {
+    subscription.unsubscribe();//停止訂閱(退訂)
+}, 5000);
