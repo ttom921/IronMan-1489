@@ -50,10 +50,22 @@
 //     complete: () => { console.log('complete'); }
 // });
 
-import { interval, of } from "rxjs";
-import { startWith } from "rxjs/operators";
-let source$ = interval(1000);
-let example$ = source$.pipe(startWith(0));
+// import { interval, of } from "rxjs";
+// import { startWith } from "rxjs/operators";
+// let source$ = interval(1000);
+// let example$ = source$.pipe(startWith(0));
+// example$.subscribe({
+//     next: (value) => { console.log(value); },
+//     error: (err) => { console.log('error: ' + err) },
+//     complete: () => { console.log('complete'); }
+// });
+
+import { interval } from "rxjs";
+import { take, merge } from "rxjs/operators";
+let source$ = interval(500).pipe(take(3));
+let source2$ = interval(300).pipe(take(6));
+let example$ = source$.pipe(merge(source2$));
+
 example$.subscribe({
     next: (value) => { console.log(value); },
     error: (err) => { console.log('error: ' + err) },
