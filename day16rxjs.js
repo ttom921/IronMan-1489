@@ -139,8 +139,8 @@
 
 
 import { from, interval, zip, of, empty } from "rxjs";
-import { map, catchError, concat } from "rxjs/operators";
-import { startWith } from "rxjs-compat/operator/startWith";
+import { map, catchError, concat,startWith } from "rxjs/operators";
+
 
 const title = document.getElementById('title');
 
