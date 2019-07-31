@@ -129,6 +129,7 @@ function create(subscriber) {
     }
     return observable;
 }
+
 var observable = create(function (observer) {
     observer.next(1);
     observer.next(2);
